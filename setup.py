@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
 
 
 import os, sys
 import re
+from google.colab import drive
 import spacy
 import random
 import re
@@ -72,10 +72,3 @@ predict_result = pd.DataFrame(
     })
 
 predict_result.to_csv('data abuse detection')
-
-print('New data added')
-
-predict_result.to_csv(data,index=False)
-
-print('Dataset updated')
-
