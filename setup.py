@@ -35,7 +35,7 @@ auth = tweepy.OAuthHandler(api_key, api_secret_key)
 auth.set_access_token(access_token, access_token_secret) 
 api=tweepy.API(auth)
 
-data= pd.DataFrame()
+df= pd.DataFrame()
 for i in range(14):
   hasilAnalisis =[]
   today = DT.date.today()
@@ -44,8 +44,8 @@ for i in range(14):
   print(str(dayH))
   hasilSearch = api.search(q="pemerintah", lang="id", count=300, since=str(dayHminusOne), until=str(dayH))
   json_data = [r._json for r in results]
-  df = pd.io.json.json_normalize(json_data)
-  data=data.append(df)
+  data = pd.io.json.json_normalize(json_data)
+  df=data.append(data)
 
 def klasifikasi(tweet):
   tweet_bersih = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ",tweet).split())
