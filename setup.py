@@ -71,4 +71,6 @@ predict_result = pd.DataFrame(
      'prediction': predict
     })
 
-predict_result.to_csv('data abuse detection')
+origin='data abuse detection.csv'
+
+predict_result.to_csv(origin,index=False)
