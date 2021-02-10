@@ -16,7 +16,7 @@ import random
 import math
 from pathlib import Path
 
-nlp = spacy.load(os.path.abspath("Abusive/"))
+nlp = spacy.load(os.path.abspath("Abusive"))
 
 import tweepy
 import re
