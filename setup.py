@@ -22,7 +22,6 @@ import tweepy
 import re
 from textblob import TextBlob
 import datetime as DT
-import yfinance as yt 
 import matplotlib.pyplot as plt
 import numpy
 
@@ -45,7 +44,7 @@ for i in range(14):
   hasilSearch = api.search(q="pemerintah", lang="id", count=300, since=str(dayHminusOne), until=str(dayH))
   json_data = [r._json for r in results]
   data = pd.io.json.json_normalize(json_data)
-  df=data.append(data)
+  df=df.append(data)
 
 def klasifikasi(tweet):
   tweet_bersih = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ",tweet).split())
