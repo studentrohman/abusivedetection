@@ -42,7 +42,7 @@ for i in range(14):
   dayHminusOne = dayH-DT.timedelta(days=1)
   print(str(dayH))
   hasilSearch = api.search(q="pemerintah", lang="id", count=300, since=str(dayHminusOne), until=str(dayH))
-  json_data = [r._json for r in results]
+  json_data = [r._json for r in hasilSearch]
   data = pd.io.json.json_normalize(json_data)
   df=df.append(data)
 
