@@ -10,7 +10,6 @@ from spacy.scorer import Scorer
 from spacy.gold import GoldParse
 from spacy import displacy
 import pandas as pd
-import jsonlines
 import random
 import math
 from pathlib import Path
