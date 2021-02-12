@@ -2,7 +2,6 @@
 
 import os, sys
 import re
-from google.colab import drive
 import spacy
 import random
 import re
